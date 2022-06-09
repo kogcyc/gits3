@@ -26,10 +26,10 @@ jobs:
     - name: Invalidate Cloudfront CDN
       run: aws cloudfront create-invalidation --distribution-id E2Y92MW8Z10X64 --paths '/*'
 
-    - name: setup python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.10.0'
+    - #name: setup python
+      #uses: actions/setup-python@v2
+      #with:
+        #python-version: '3.10.0'
 
     - name: run a python3 one-liner
       run: python3 -c "print('hello')"
