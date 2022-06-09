@@ -21,6 +21,4 @@ jobs:
     
     - name: Deploy static site to S3 bucket
       run: aws s3 sync ./public/ s3://aaagittest --delete
-	- name: Invalidate
-	  run: aws cloudfront create-invalidation --distribution-id E2Y92MW8Z10X64 --paths '/*'
       # --delete flag will remove any file in the s3 that are not on the "thefoldertodeploy" folder
