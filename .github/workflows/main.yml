@@ -27,4 +27,4 @@ jobs:
       run: python3 -c "print('hello')"
 
     - name: run python3
-	  run: python3 .\test.py
+	  run: python3 .\public\test.py
