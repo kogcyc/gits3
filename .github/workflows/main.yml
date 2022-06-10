@@ -25,10 +25,4 @@ jobs:
     - name: run a python3 one-liner
       run: python3 -c "print('hello')"
 
-	- name: run a python3 one-liner
-	- uses: jannekem/run-python-script-action@v1
-	  with:
-		script: |
-		  add_path("/")
-		  print("Sending a message")
 
