@@ -36,7 +36,7 @@ jobs:
         directory: ./public/output
         
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./public/ s3://aaagittest
+      run: aws s3 sync ./public/ s3://aaagittest --delete
       # --delete flag will remove any file in the s3 that are not on the "thefoldertodeploy" folder
 
     - name: Invalidate Cloudfront CDN
