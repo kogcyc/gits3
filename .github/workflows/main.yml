@@ -23,8 +23,7 @@ jobs:
         cd ./public/output
         git init
         git add -A
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "kogcyc@gmail.com"
         git commit -m 'deploy'
 
     - name: Force push to destination branch
