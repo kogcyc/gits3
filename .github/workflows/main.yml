@@ -15,11 +15,8 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-2 # Use your bucket region here
 
-    #- name: run python3
-      #run: python3 ./test.py
-        
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./public/ s3://aaagittest --delete
+      run: aws s3 sync ./public/ s3://aaagittest
       # --delete flag will remove any file in the s3 that are not on the "thefoldertodeploy" folder
 
     - name: Invalidate Cloudfront CDN
