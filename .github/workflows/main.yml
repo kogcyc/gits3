@@ -7,6 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
     - uses: actions/checkout@v1
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -25,4 +26,5 @@ jobs:
     - name: run a python3 one-liner
       run: python3 -c "print('hello')"
 
-
+	- uses: actions/checkout@v1
+	  run: python3 test.py
