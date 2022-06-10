@@ -15,10 +15,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-2 # Use your bucket region here
         
-    # Here you could add some building steps if you were dealing with some angular/react/Vue...
-    # - name: Build static site
-    #  run: yarn install && npm run-script build
-    
     - name: Deploy static site to S3 bucket
       run: aws s3 sync ./public/ s3://aaagittest --delete
       # --delete flag will remove any file in the s3 that are not on the "thefoldertodeploy" folder
@@ -26,10 +22,8 @@ jobs:
     - name: Invalidate Cloudfront CDN
       run: aws cloudfront create-invalidation --distribution-id E2Y92MW8Z10X64 --paths '/*'
 
-    #- name: setup python
-      #uses: actions/setup-python@v2
-      #with:
-        #python-version: '3.10.0'
-
     - name: run a python3 one-liner
       run: python3 -c "print('hello')"
+
+    - name: run a python3 writer
+      run: python3 test.py
