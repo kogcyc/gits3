@@ -17,6 +17,15 @@ jobs:
 
     - name: run python3
       run: python3 ./public/test.py
+
+    - name: Init new repo in dist folder and commit generated files
+      run: |
+        cd ./output/
+        git init
+        git add -A
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m 'deploy'
         
     - name: Deploy static site to S3 bucket
       run: aws s3 sync ./public/ s3://aaagittest
