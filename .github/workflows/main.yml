@@ -24,6 +24,7 @@ jobs:
         git init
         git add -A
         git config --local user.email "kogcyc@gmail.com"
+        git config --local user.name "kogcyc"
         git commit -m 'deploy'
 
     - name: Force push to destination branch
