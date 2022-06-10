@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Kogswell Cycles</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="ISO-8859-1"> 
+
+<link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+<link rel="manifest" href="/fav/site.webmanifest">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Supermercado+One&family=Tinos:ital@0;1&display=swap');
+
+body {
+	font-family: Roboto;
+	background-color: #eee;
+}
+
+#container,.section {
+	border-radius: 6px;
+	padding: 10px;
+}
+
+#container {
+	margin: auto;
+	max-width: 800px;
+}
+
+.section {
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 1.3em;
+}
+
+.reg_text {
+	font-weight: 500;
+	font-size: 0.8em;
+}
+
+.reg_text_serif {
+	font-weight: 500;
+	font-size: 0.9em;
+	font-family: Tinos;
+}
+
+.footer_text {
+	font-weight: 500;
+	font-size: 0.6em;
+}
+
+#toplogo {
+	background: #ec8;
+}
+
+#documents {
+	background: #bcb;
+}
+
+#footer {
+	background: #000;
+}
+
+#error_logo {
+	background: #fa8;
+}
+
+#error_403 {
+	background: #b00;
+}
+.error_403_a_style {
+	text-decoration: none;
+	color: #b00;
+	background-color: #fff;
+	padding: 1px 5px;
+	border-radius: 6px;
+}	
+
+.black {
+	color: #000;
+}
+
+.white {
+	color: #fff;
+}
+
+.smallImage {
+	width: 100%;
+}
+
+
+.docgrid {
+display: grid;
+grid-template-columns: repeat(9, 1fr);
+grid-template-rows: repeat(1, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.docgrid1 { grid-area: 1 / 1 / 2 / 2; }
+.docgrid2 { grid-area: 1 / 2 / 2 / 4; }
+.docgrid3 { grid-area: 1 / 4 / 2 / 5; }
+.docgrid4 { grid-area: 1 / 5 / 2 / 9; }
+.docgrid5 { grid-area: 1 / 9 / 2 / 10; }
+
+.downloadButton {
+	height: 30px;
+	padding: 8px;
+	background-color: #999;
+	color: #fff;
+	font-weight: 700;
+	font-size: 0.7em;
+	border-radius: 6px;
+	text-decoration: none;
+	width: 70px;
+}
+
+#this a {
+
+    display: inline;
+    padding-right: 4px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 0.9em;
+}
+
+#logo1 {
+	font-family: Supermercado One;
+    font-size: 2.2em;
+    letter-spacing: -3px;
+    margin: -2px;
+    padding-right: 13px;
+}
+
+#this, #logo1 {
+	color: #000;
+}
+
+@media only screen and (max-width: 680px) {
+
+    #this a {
+    	display: block;
+        padding-top: 4px;
+	}
+    
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="container">
+
+  <div class="section" id="toplogo">
+    <div id="this">
+      <span id="logo1">kogswell</span>
+      <a>GOODS</a>
+      <a>BLOG</a>
+      <a>SEARCH</a>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="section" id="documents">
+	<br>
+    <span class="black">Welcome jj</span>
+
+ 	<div class="black reg_text_serif">
+		<p class="has-line-data" data-line-start="0" data-line-end="1">June 2022</p>
+		<p class="has-line-data" data-line-start="2" data-line-end="3">It has been a year and a half since we announced that Kogswell is returning. That return  has been moving slowly. But conditions are good and we seem to be picking up speed.</p>
+		<p class="has-line-data" data-line-start="4" data-line-end="5">For those who are new to Kogswell, our goal is to make it easy for people to use their bikes for transportation. We do that by building a community of daily cyclists and then using their extraordinary talents to do things like designing bicycle widgets using open-source methods. So if you ride a bike and/or have bicycle design chops then consider yourself one of us.</p>
+		<p class="has-line-data" data-line-start="6" data-line-end="7">We hope that veteran Kogswell kampaigners find a place here as well. There would not have been a Kogswell without their contributions and I would be happy to hear what they have been doing.</p>
+		<p class="has-line-data" data-line-start="8" data-line-end="9">So thanks for visiting and please come back soon.</p>
+		<p class="has-line-data" data-line-start="8" data-line-end="9">-M(atthew)</p>
+	</div>
+
+    <br>
+
+  </div>
+
+  <br>
+
+  <div class="section" id="footer">
+ 
+	<div class="white footer_text">
+		Copyright (C) 2022, Kogswell Cycles<br>
+		Please register to vote
+	</div>
+
+    <br><br><br>
+
+  </div>
+
+</div>
+
+<script>
+
+  fetch("./5.txt")
+    .then(response => response.text())
+    .then((response) => {
+      console.log(response)
+    })
+    .catch(err => console.log(err))
+
+  fetch('https://swapi.dev/api/people/1')
+    .then(response => response.json())
+    .then(commits => console.log(commits.name));
+
+  fetch('https://kevsxorl35.execute-api.us-east-1.amazonaws.com/api/cors/')
+    .then(response => response.json())
+    .then(commits => console.log(commits.cors));
+
+</script>
+
+
+</body>
+</html>
