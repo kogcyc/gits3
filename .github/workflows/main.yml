@@ -26,5 +26,4 @@ jobs:
     - name: run a python3 one-liner
       run: python3 -c "print('hello')"
 
-	- uses: actions/checkout@v1
-	  run: python3 test.py
+	  run: python3 .\test.py
